@@ -12,7 +12,7 @@ English is the primary repository language.
 - **TNet v1 (candidate T)** — the outcome of the PoW research (`spec/07`, ADR 0015/0016): a
   header-seeded int8 network on tensor cores whose output-row pieces are lottery tickets; a block is
   verified by recomputing one row (11–17 ms on a laptop CPU); 88% of a mining attempt runs on tensor
-  cores; parameters and test vectors frozen (`docs/research/tnet-v2.md`, `spec/vectors/`), measured on
+  cores (about 99% in CPPminer, which does the requantization inside the GEMM); parameters and test vectors frozen (`docs/research/tnet-v2.md`, `spec/vectors/`), measured on
   Turing and Ampere GPUs. The coin built on it is **Requant**
   ([`requant-network/requant`](https://github.com/requant-network/requant)); this repository stays the research
   record.
